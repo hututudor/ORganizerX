@@ -19,9 +19,27 @@ public class RuleManager : MonoBehaviour
         {
             if (rule.IsCorrect())
             {
-                Debug.Log("Rule " + rule.name + " " + rule.GetScore());
+                // Debug.Log("Rule " + rule.name + " " + rule.GetScore());
                 score += rule.GetScore();
             }
         }
+    }
+    
+    public int GetScore()
+    {
+        return score;
+    }
+    
+    public bool IsCorrect()
+    {
+        foreach (Rule rule in rules)
+        {
+            if (!rule.IsCorrect())
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
