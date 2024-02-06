@@ -30,7 +30,7 @@ public class Game : MonoBehaviour
         
         if (isRunning != timer.isRunning)
         {
-            // game over
+           	OnGameOver();
         }
         
         isRunning = timer.isRunning;

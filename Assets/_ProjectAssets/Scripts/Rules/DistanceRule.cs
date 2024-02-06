@@ -6,17 +6,17 @@ public class DistanceRule : Rule
 {
     public Transform target;
     public float distance;
-	public bool shouldBeInside;
+	public bool shouldBeNear;
     
     public override bool IsCorrect()
     {
 		float actualDistance = Vector3.Distance(this.transform.position, target.position);
-        return shouldBeInside ? actualDistance <= distance : actualDistance >= distance;
+        return shouldBeNear ? actualDistance <= distance : actualDistance >= distance;
     }
     
     public override int CalculateScore() 
 	{
-		if (shouldBeInside) {
+		if (shouldBeNear) {
             return (int) (distance - Vector3.Distance(this.transform.position, target.position));
         }
 
