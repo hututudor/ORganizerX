@@ -8302,7 +8302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a08cdefc35d66854d9ab5abf9278c489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeInSeconds: 30
+  timeInSeconds: 130
   timerText: {fileID: 1799936036}
   isRunning: 1
 --- !u!114 &1777525347
